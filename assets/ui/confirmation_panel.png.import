@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CliffTileset.png-cecdc373e8392fae8cbebf050a86d6f5.stex"
+path="res://.import/confirmation_panel.png-98a0aadcc89c8939fc71e5902f632ac8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CliffTileset.png"
-dest_files=[ "res://.import/CliffTileset.png-cecdc373e8392fae8cbebf050a86d6f5.stex" ]
+source_file="res://assets/ui/confirmation_panel.png"
+dest_files=[ "res://.import/confirmation_panel.png-98a0aadcc89c8939fc71e5902f632ac8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree.jpg-4e73c0f2b842ba5e7dca1714b0988ec1.stex"
+path="res://.import/sqr_button_disabled.png-befb53f94b8925d794f120893c6ad432.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/Tree.jpg"
-dest_files=[ "res://.import/Tree.jpg-4e73c0f2b842ba5e7dca1714b0988ec1.stex" ]
+source_file="res://assets/ui/sqr_button_disabled.png"
+dest_files=[ "res://.import/sqr_button_disabled.png-befb53f94b8925d794f120893c6ad432.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

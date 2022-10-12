@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CliffTileset.png-cecdc373e8392fae8cbebf050a86d6f5.stex"
+path="res://.import/yes_button_normal.png-4d20171854e871593f47ce6bd92f5043.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CliffTileset.png"
-dest_files=[ "res://.import/CliffTileset.png-cecdc373e8392fae8cbebf050a86d6f5.stex" ]
+source_file="res://assets/ui/yes_button_normal.png"
+dest_files=[ "res://.import/yes_button_normal.png-4d20171854e871593f47ce6bd92f5043.stex" ]
 
 [params]
 
