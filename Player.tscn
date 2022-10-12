@@ -70,6 +70,7 @@ vframes = 5
 frame = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 5.5 )
 shape = SubResource( 7 )
 
@@ -79,6 +80,7 @@ anims/RESET = SubResource( 9 )
 anims/Walking = SubResource( 10 )
 
 [node name="InteractionArea" type="Position2D" parent="."]
+visible = false
 position = Vector2( 0, 6 )
 __meta__ = {
 "_edit_group_": true
