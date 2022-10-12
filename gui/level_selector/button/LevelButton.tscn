@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/ui/sqr_button_disabled.png" type="Texture" id=1]
+[ext_resource path="res://assets/ui/sqr_button_pressed.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/sqr_button_normal.png" type="Texture" id=3]
+[ext_resource path="res://gui/level_selector/button/LevelButton.gd" type="Script" id=4]
+[ext_resource path="res://assets/ui/icons/locked.png" type="Texture" id=5]
+
+[node name="LevelButton" type="TextureButton"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_disabled = ExtResource( 1 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="Locked" type="Sprite" parent="."]
+visible = false
+position = Vector2( 20, 18 )
+scale = Vector2( 2.25, 1.85 )
+texture = ExtResource( 5 )
