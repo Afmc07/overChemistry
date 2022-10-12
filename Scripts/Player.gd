@@ -7,6 +7,7 @@ const FRICTION = 500
 var velocity = Vector2.ZERO
 
 onready var animationPlayer = $AnimationPlayer
+onready var sprite = $Sprite
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -16,9 +17,10 @@ func _physics_process(delta):
 	
 	if input_vector != Vector2.ZERO:
 		if input_vector.x > 0:
-			animationPlayer.play("Run Right")
-		else:
-			animationPlayer.play("Run Left")
+			sprite.flip_h = false
+		elif input_vector.x < 0:
+			sprite.flip_h = true
+		animationPlayer.play("Walking")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else: 
 		animationPlayer.play("Idle")

@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Run Right.tres" type="Animation" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
-[ext_resource path="res://assets/NicePng_megaman-sprite-png_2222069.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/player.png" type="Texture" id=3]
 
-[sub_resource type="CapsuleShape2D" id=1]
-height = 12.0
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6.5, 7.5 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=8]
 resource_name = "Idle"
+length = 2.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -16,52 +17,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 15 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"values": [ 0, 1, 0 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "IdleL"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 15 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=9]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -73,24 +35,12 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 32 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
+"values": [ 15 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "Run Left"
-length = 1.2
+[sub_resource type="Animation" id=10]
+resource_name = "Walking"
+length = 0.8
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -99,57 +49,37 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 14 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"values": [ 0, 6, 7, 8, 9, 10, 11 ]
 }
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 21.0
+radius = 12.0
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 160, 90 )
+position = Vector2( 166, 92 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, 1 )
 scale = Vector2( 0.790816, 0.740566 )
 texture = ExtResource( 3 )
-flip_h = true
-hframes = 8
-vframes = 17
-frame = 32
-__meta__ = {
-"_edit_group_": true
-}
+hframes = 6
+vframes = 5
+frame = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2, -1 )
-shape = SubResource( 1 )
+position = Vector2( 0, 5.5 )
+shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Idle"
-anims/Idle = SubResource( 3 )
-anims/IdleL = SubResource( 4 )
-anims/RESET = SubResource( 2 )
-"anims/Run Left" = SubResource( 5 )
-"anims/Run Right" = ExtResource( 1 )
+anims/Idle = SubResource( 8 )
+anims/RESET = SubResource( 9 )
+anims/Walking = SubResource( 10 )
 
 [node name="InteractionArea" type="Position2D" parent="."]
-position = Vector2( 2, -1 )
+position = Vector2( 0, 6 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -158,6 +88,3 @@ __meta__ = {
 
 [node name="Shape" type="CollisionShape2D" parent="InteractionArea/Area2D"]
 shape = SubResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
