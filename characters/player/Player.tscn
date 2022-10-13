@@ -115,6 +115,7 @@ visible = false
 position = Vector2( 12.5, -1.5 )
 scale = Vector2( 0.188889, 0.188889 )
 animation = "stick"
+frame = 0
 
 [connection signal="area_entered" from="Position2D/InteractionArea" to="." method="_on_InteractionArea_area_entered"]
 [connection signal="area_exited" from="Position2D/InteractionArea" to="." method="_on_InteractionArea_area_exited"]

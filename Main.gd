@@ -13,7 +13,7 @@ func change_scene(scene: String) -> void:
 
 
 func _input(event):
-	if Input.get_action_strength("exit"):
+	if event.get_action_strength("exit"):
 		if current_scene.name != "Menu" and current_scene.name != "LevelSelector":
 			var confirmation = CONFIRMATION_SCENE.instance()
 			add_child(confirmation)
