@@ -6,6 +6,10 @@ const FRICTION = 500
 
 var velocity = Vector2.ZERO
 
+var interacting_with = ""
+var held_item = ""
+var holding_item = false
+
 onready var animationPlayer = $AnimationPlayer
 onready var sprite = $Sprite
 
@@ -27,4 +31,23 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	velocity = move_and_slide(velocity)
- 
+	
+	if Input.is_action_just_pressed("interact"):
+		if interacting_with == "tree":
+			tree_interaction()
+		
+func _on_InteractionArea_area_entered(area):
+	if area.is_in_group("Tree"):
+		interacting_with = "tree"
+
+
+func _on_InteractionArea_area_exited(area):
+	if area.is_in_group("Tree"):
+		interacting_with = ""
+
+func tree_interaction():
+	var holding_item = true
+	var held_item = "stick"
+	$SpeechBubble.play("stick")
+	$SpeechBubble.visible = true
+	

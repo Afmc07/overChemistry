@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wooden_door.png-c621f82ca226d20c3dff0a6de85c9c9c.stex"
+path="res://.import/speech-stick2.png-15715dad22d0d42e465f5593e51ab985.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/walls/wooden_door.png"
-dest_files=[ "res://.import/wooden_door.png-c621f82ca226d20c3dff0a6de85c9c9c.stex" ]
+source_file="res://assets/interaction_speech/speech-stick2.png"
+dest_files=[ "res://.import/speech-stick2.png-15715dad22d0d42e465f5593e51ab985.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

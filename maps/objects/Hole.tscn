@@ -1,18 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/HolePlaceholder.png" type="Texture" id=1]
+[ext_resource path="res://maps/objects/InteractionBubble.tscn" type="PackedScene" id=2]
+[ext_resource path="res://maps/objects/Hole.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 190.54, 81.5788 )
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 110.947
-height = 311.619
+radius = 156.631
+height = 155.338
 
 [node name="Hole" type="Sprite"]
 position = Vector2( 240, 160 )
 scale = Vector2( 0.157447, 0.153226 )
 texture = ExtResource( 1 )
+script = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -25,3 +28,10 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[node name="AnimatedSprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 152.162, -122.505 )
+scale = Vector2( 1.98198, 1.98198 )
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_InteractionArea_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_InteractionArea_area_exited"]

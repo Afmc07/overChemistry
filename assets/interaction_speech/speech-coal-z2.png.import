@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wooden_door.png-c621f82ca226d20c3dff0a6de85c9c9c.stex"
+path="res://.import/speech-coal-z2.png-8bc80a3c669eaeb05a0874a142f3ce7b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/walls/wooden_door.png"
-dest_files=[ "res://.import/wooden_door.png-c621f82ca226d20c3dff0a6de85c9c9c.stex" ]
+source_file="res://assets/interaction_speech/speech-coal-z2.png"
+dest_files=[ "res://.import/speech-coal-z2.png-8bc80a3c669eaeb05a0874a142f3ce7b.stex" ]
 
 [params]
 
