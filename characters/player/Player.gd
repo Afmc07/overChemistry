@@ -14,7 +14,8 @@ var holding_item = false
 onready var animationPlayer = $AnimationPlayer
 onready var sprite = $Sprite
 
-onready var STICK_SCENE = preload("res://maps/objects/Stick.tscn")
+onready var STICK_SCENE = preload("res://items/Stick.tscn")
+onready var COAL_SCENE = preload("res://items/Coal.tscn")
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -38,7 +39,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("interact"):
 		if interacting_with == "tree":
 			tree_interaction()
-	
+			
+		if interacting_with == "hole":
+			hole_interaction()
+		
 	if Input.is_action_just_pressed("pick_drop"):
 		if held_item == "":
 			pick_item()
@@ -48,22 +52,44 @@ func _physics_process(delta):
 func _on_InteractionArea_area_entered(area):
 	if area.is_in_group("Tree"):
 		interacting_with = "tree"
+	
+	if area.is_in_group("Hole"):
+		interacting_with = "hole"
+
 	if area.is_in_group("Stick"):
 		interacting_item_ref = area
 		interacting_with = "stick"
-
+	
+	if area.is_in_group("Coal"):
+		interacting_item_ref = area
+		interacting_with = "coal"
 
 func _on_InteractionArea_area_exited(area):
-	if area.is_in_group("Tree"):
-		interacting_with = ""
-	if area.is_in_group("Stick"):
-		interacting_with = ""
+	interacting_with = ""
 
 func tree_interaction():
 	holding_item = true
 	held_item = "stick"
 	$SpeechBubble.play("stick")
 	$SpeechBubble.visible = true
+
+func hole_interaction():
+	var hole = get_parent().get_node("Hole")
+	var hole_status = hole.get("status")
+	if hole_status == "empty" and held_item == "stick":
+		holding_item = false
+		held_item = ""
+		$SpeechBubble.visible = false
+		hole.put_sticks()
+	if hole_status == "with_sticks":
+		hole.start_fire()
+	if hole_status == "with_coal":
+		holding_item = true
+		held_item = "coal"
+		$SpeechBubble.play("coal")
+		$SpeechBubble.visible = true
+		hole.get_coal()
+	
 
 func pick_item():
 	if interacting_with == "stick":
@@ -72,12 +98,25 @@ func pick_item():
 		$SpeechBubble.play("stick")
 		$SpeechBubble.visible = true
 		interacting_item_ref.queue_free()
+	
+	if interacting_with == "coal":
+		holding_item = true
+		held_item = "coal"
+		$SpeechBubble.play("coal")
+		$SpeechBubble.visible = true
+		interacting_item_ref.queue_free()
 
 func drop_item():
 	if held_item == "stick":
 		var stick = STICK_SCENE.instance()
 		stick.position = global_position
 		get_parent().add_child(stick)
+	
+	if held_item == "coal":
+		var stick = COAL_SCENE.instance()
+		stick.position = global_position
+		get_parent().add_child(stick)
+	
 	holding_item = false
 	held_item = ""
 	$SpeechBubble.visible = false
