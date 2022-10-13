@@ -35,19 +35,19 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	velocity = move_and_slide(velocity)
-	
+		
+	if Input.is_action_just_pressed("pick_drop"):
+		if !holding_item:
+			pick_item()
+		else:
+			drop_item()
+
 	if Input.is_action_just_pressed("interact"):
 		if interacting_with == "tree":
 			tree_interaction()
 			
 		if interacting_with == "hole":
 			hole_interaction()
-		
-	if Input.is_action_just_pressed("pick_drop"):
-		if held_item == "":
-			pick_item()
-		else:
-			drop_item()
 
 func _on_InteractionArea_area_entered(area):
 	if area.is_in_group("Tree"):
@@ -67,42 +67,18 @@ func _on_InteractionArea_area_entered(area):
 func _on_InteractionArea_area_exited(area):
 	interacting_with = ""
 
-func tree_interaction():
-	holding_item = true
-	held_item = "stick"
-	$SpeechBubble.play("stick")
-	$SpeechBubble.visible = true
-
-func hole_interaction():
-	var hole = get_parent().get_node("Hole")
-	var hole_status = hole.get("status")
-	if hole_status == "empty" and held_item == "stick":
-		holding_item = false
-		held_item = ""
-		$SpeechBubble.visible = false
-		hole.put_sticks()
-	if hole_status == "with_sticks":
-		hole.start_fire()
-	if hole_status == "with_coal":
-		holding_item = true
-		held_item = "coal"
-		$SpeechBubble.play("coal")
-		$SpeechBubble.visible = true
-		hole.get_coal()
-	
-
 func pick_item():
 	if interacting_with == "stick":
-		holding_item = true
 		held_item = "stick"
 		$SpeechBubble.play("stick")
+		holding_item = true
 		$SpeechBubble.visible = true
 		interacting_item_ref.queue_free()
 	
 	if interacting_with == "coal":
-		holding_item = true
 		held_item = "coal"
 		$SpeechBubble.play("coal")
+		holding_item = true
 		$SpeechBubble.visible = true
 		interacting_item_ref.queue_free()
 
@@ -113,10 +89,37 @@ func drop_item():
 		get_parent().add_child(stick)
 	
 	if held_item == "coal":
-		var stick = COAL_SCENE.instance()
-		stick.position = global_position
-		get_parent().add_child(stick)
+		var coal = COAL_SCENE.instance()
+		coal.position = global_position
+		get_parent().add_child(coal)
 	
 	holding_item = false
 	held_item = ""
 	$SpeechBubble.visible = false
+
+func tree_interaction():
+	if !holding_item:
+		holding_item = true
+		held_item = "stick"
+		$SpeechBubble.play("stick")
+		$SpeechBubble.visible = true
+
+func hole_interaction():
+	var hole = get_parent().get_node("Hole")
+	var hole_status = hole.get("status")
+	
+	if hole_status == "empty" and held_item == "stick":
+		holding_item = false
+		held_item = ""
+		$SpeechBubble.visible = false
+		hole.put_sticks()
+	
+	if hole_status == "with_sticks" and !holding_item:
+		hole.start_fire()
+	
+	if hole_status == "with_coal" and !holding_item:
+		holding_item = true
+		held_item = "coal"
+		$SpeechBubble.play("coal")
+		$SpeechBubble.visible = true
+		hole.get_coal()
