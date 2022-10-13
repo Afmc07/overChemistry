@@ -49,7 +49,6 @@ func _on_InteractionArea_area_entered(area):
 	if area.is_in_group("Tree"):
 		interacting_with = "tree"
 	if area.is_in_group("Stick"):
-		print("STIIIIIIIIIIIIIIIIIIICK")
 		interacting_item_ref = area
 		interacting_with = "stick"
 
