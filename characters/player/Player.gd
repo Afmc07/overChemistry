@@ -46,8 +46,8 @@ func _on_InteractionArea_area_exited(area):
 		interacting_with = ""
 
 func tree_interaction():
-	var holding_item = true
-	var held_item = "stick"
+	holding_item = true
+	held_item = "stick"
 	$SpeechBubble.play("stick")
 	$SpeechBubble.visible = true
 	

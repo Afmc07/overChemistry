@@ -2,6 +2,7 @@ extends Sprite
 
 
 var show_interaction_bubble = false
+var has_stick = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +18,10 @@ func _process(delta):
 
 
 func _on_InteractionArea_area_entered(area):
-	show_interaction_bubble = true
+	var player_held_item = get_parent().get_node("Player").get("held_item")
+	if player_held_item == "stick":
+		$AnimatedSprite.play("stick-z")
+		show_interaction_bubble = true
 
 
 func _on_InteractionArea_area_exited(area):
