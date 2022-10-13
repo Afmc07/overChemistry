@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stick.png-cb78b58c9c30f37d265dad3ca1e83e31.stex"
+path="res://.import/speech-coal2.png-c392d11b14a4d3ce4e6d1d78d79298a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/stick.png"
-dest_files=[ "res://.import/stick.png-cb78b58c9c30f37d265dad3ca1e83e31.stex" ]
+source_file="res://assets/interaction_speech/speech-coal2.png"
+dest_files=[ "res://.import/speech-coal2.png-c392d11b14a4d3ce4e6d1d78d79298a7.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
