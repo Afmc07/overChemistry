@@ -5,9 +5,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.5, 5.75 )
 
-[node name="Area2D" type="Area2D" groups=["Coal"]]
+[node name="Coal" type="Area2D" groups=["Coal", "Item"]]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Coal" type="Sprite" parent="."]
 scale = Vector2( 0.560606, 0.560606 )
 texture = ExtResource( 1 )
 

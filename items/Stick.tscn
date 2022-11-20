@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
 
-[node name="Stick" type="Area2D" groups=["Stick"]]
+[node name="Stick" type="Area2D" groups=["Item", "Stick"]]
 
 [node name="Stick" type="Sprite" parent="."]
 position = Vector2( -1, -0.999998 )

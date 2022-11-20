@@ -11,7 +11,7 @@ extents = Vector2( 190.54, 81.5788 )
 radius = 156.631
 height = 155.338
 
-[node name="Hole" type="Sprite"]
+[node name="Hole" type="Sprite" groups=["MapObject"]]
 position = Vector2( 240, 160 )
 scale = Vector2( 0.157447, 0.153226 )
 texture = ExtResource( 2 )
@@ -24,16 +24,16 @@ visible = false
 position = Vector2( 6.35132, 3.26343 )
 shape = SubResource( 1 )
 
-[node name="InteractionArea" type="Area2D" parent="." groups=["Hole"]]
+[node name="InteractionArea" type="Area2D" parent="." groups=["MapObject"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 152.162, -122.505 )
 scale = Vector2( 1.98198, 1.98198 )
-frame = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

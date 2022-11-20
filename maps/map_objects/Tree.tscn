@@ -16,7 +16,7 @@ extents = Vector2( 12.3636, 14.0952 )
 [sub_resource type="CircleShape2D" id=10]
 radius = 26.9522
 
-[node name="Tree" type="Sprite"]
+[node name="Tree" type="Sprite" groups=["MapObject"]]
 position = Vector2( 94, 74 )
 scale = Vector2( 1.375, 1.3125 )
 texture = ExtResource( 1 )
@@ -45,6 +45,7 @@ shape = SubResource( 10 )
 visible = false
 position = Vector2( 11.6818, -13.5303 )
 scale = Vector2( 0.225252, 0.225252 )
+frame = 1
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_InteractionArea_area_entered"]
 [connection signal="area_exited" from="InteractionArea" to="." method="_on_InteractionArea_area_exited"]
