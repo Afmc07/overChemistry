@@ -1,8 +1,7 @@
 extends Sprite
 
-
 var show_interaction_bubble = false
-var status = "empty"
+var hole_status = "empty"
 
 var empty_hole = preload("res://assets/objects/hole/Hole.png")
 var hole_with_sticks = preload("res://assets/objects/hole/HoleSticks.png")
@@ -11,58 +10,76 @@ var hole_with_coal = preload("res://assets/objects/hole/HoleWithCoal.png")
 
 onready var COAL_SCENE = preload("res://items/Coal.tscn")
 
+onready var animated_sprite = $AnimatedSprite
+
+
+func _ready():
+	animated_sprite.play("stick-z")
+
 
 func _on_InteractionArea_area_entered(area):
-	var player_held_item = ""
-	if area.get_parent().get("held_item") != null:
-		player_held_item = area.get_parent().get("held_item").name.to_lower()
-	
-	if player_held_item == "stick" and status == "empty":
-		$AnimatedSprite.play("stick-z")
-		$AnimatedSprite.visible = true
-	if status == "with_sticks":
-		$AnimatedSprite.play("fire-z")
-		$AnimatedSprite.visible = true
-	if status == "with_coal":
-		$AnimatedSprite.play("coal-z")
-		$AnimatedSprite.visible = true
-	
+	if area.is_in_group("Player"):
+		if player_is_holding_stick() and hole_status == "empty":
+			play_animation("stick-z")
+		if hole_status == "with_sticks":
+			play_animation("fire-z")
+		if hole_status == "with_coal":
+			play_animation("coal-z")
+
+
+func player_is_holding_stick():
+	var player_held_item = get_parent().get_node("Player").get("held_item")
+	if player_held_item != null:
+		return player_held_item.name.to_lower().begins_with("stick")
+	return false
+
+
+func play_animation(animation):
+	animated_sprite.play(animation)
+	animated_sprite.visible = true
+
+
 func _on_InteractionArea_area_exited(area):
-	$AnimatedSprite.visible = false
+	if area.is_in_group("Player"):
+		animated_sprite.visible = false
+
 
 func put_sticks():
 	get_node(".").set_texture(hole_with_sticks)
-	status = "with_sticks"
-	$AnimatedSprite.play("fire-z")
-	
+	hole_status = "with_sticks"
+	animated_sprite.play("fire-z")
+
+
 func start_fire():
 	get_node(".").set_texture(hole_with_sticks_burning)
-	status = "with_sticks_burning"
+	hole_status = "with_sticks_burning"
 	$Timer.start()
-	$AnimatedSprite.visible = false
+	animated_sprite.visible = false
+
 
 func _on_Timer_timeout():
 	get_node(".").set_texture(hole_with_coal)
-	status = "with_coal"
-	$AnimatedSprite.play("coal-z")
-	$AnimatedSprite.visible = true
+	hole_status = "with_coal"
+	play_animation("coal-z")
+
 
 func get_coal():
 	get_node(".").set_texture(empty_hole)
-	status = "empty"
-	$AnimatedSprite.visible = false
+	hole_status = "empty"
+	animated_sprite.visible = false
+
 
 func interact(held_item):
 	if held_item != null:
-		if status == "empty" and held_item.name.to_lower() == "stick":
+		if hole_status == "empty" and held_item.name.to_lower().begins_with("stick"):
 			put_sticks()
 			return null
 	else:
-		if status == "with_sticks":
+		if hole_status == "with_sticks":
 			start_fire()
 			return null
-		if status == "with_coal":
+		if hole_status == "with_coal":
 			get_coal()
 			return COAL_SCENE.instance()
-	
+
 	return held_item

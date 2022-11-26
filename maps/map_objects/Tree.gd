@@ -1,14 +1,19 @@
 extends Sprite
 
-
 onready var STICK_SCENE = preload("res://items/Stick.tscn")
+
+onready var animated_sprite = $AnimatedSprite
 
 
 func _on_InteractionArea_area_entered(area):
-	$AnimatedSprite.visible = true
+	if area.is_in_group("Player"):
+		animated_sprite.visible = true
+
 
 func _on_InteractionArea_area_exited(area):
-	$AnimatedSprite.visible = false
+	if area.is_in_group("Player"):
+		animated_sprite.visible = false
+
 
 func interact(held_item):
 	if held_item == null:
