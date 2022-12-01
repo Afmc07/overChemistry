@@ -53,4 +53,5 @@ texture_pressed = ExtResource( 2 )
 expand = true
 
 [connection signal="pressed" from="Level1Button" to="." method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="Level2Button" to="." method="_on_Level2Button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
