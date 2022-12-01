@@ -38,6 +38,7 @@ shape = SubResource( 11 )
 [node name="InteractionArea" type="Area2D" parent="." groups=["Tree"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+visible = false
 position = Vector2( -7.62939e-06, 10.6667 )
 shape = SubResource( 10 )
 

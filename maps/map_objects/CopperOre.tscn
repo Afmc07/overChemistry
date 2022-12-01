@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/objects/furnace/ore.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 23.0
+
+[node name="CopperOre" type="Sprite"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 98, 128, 30, 33 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CopperCollision" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 14, 11, -4, 14, -14, 13, -13, 2, -9, -8, -2, -11, 3, -14, 9, -8, 15, 2 )
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2( 0, 2 )
+shape = SubResource( 1 )
