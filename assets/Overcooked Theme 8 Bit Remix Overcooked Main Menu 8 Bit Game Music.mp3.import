@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Overcooked Theme 8 Bit Remix Overcooked Main Menu 8 Bit Game Music.mp3-f6aaff8aedd760ba08de63873b88f6d7.mp3str"
+
+[deps]
+
+source_file="res://assets/Overcooked Theme 8 Bit Remix Overcooked Main Menu 8 Bit Game Music.mp3"
+dest_files=[ "res://.import/Overcooked Theme 8 Bit Remix Overcooked Main Menu 8 Bit Game Music.mp3-f6aaff8aedd760ba08de63873b88f6d7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
