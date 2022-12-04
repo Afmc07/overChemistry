@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HoleWithCoal.png-861d21e99130552a11851ad89bac87a8.stex"
+path="res://.import/HoleSticksBurning.png-8305af482e1bdba6806ad49edeab0030.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/hole/HoleWithCoal.png"
-dest_files=[ "res://.import/HoleWithCoal.png-861d21e99130552a11851ad89bac87a8.stex" ]
+source_file="res://assets/map_objects/hole/HoleSticksBurning.png"
+dest_files=[ "res://.import/HoleSticksBurning.png-8305af482e1bdba6806ad49edeab0030.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

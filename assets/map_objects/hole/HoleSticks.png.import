@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/furnace.png-8f8b353fc367cdc2ce1604dd7f803642.stex"
+path="res://.import/HoleSticks.png-a7a54b11b8b71680038d00aaedc7c8d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/furnace/furnace.png"
-dest_files=[ "res://.import/furnace.png-8f8b353fc367cdc2ce1604dd7f803642.stex" ]
+source_file="res://assets/map_objects/hole/HoleSticks.png"
+dest_files=[ "res://.import/HoleSticks.png-a7a54b11b8b71680038d00aaedc7c8d9.stex" ]
 
 [params]
 

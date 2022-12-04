@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HoleSticksBurning.png-2a723fe779d817e0202ad0be060c233d.stex"
+path="res://.import/ore.png-0c3c36a3154971562c07e1defa482160.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/hole/HoleSticksBurning.png"
-dest_files=[ "res://.import/HoleSticksBurning.png-2a723fe779d817e0202ad0be060c233d.stex" ]
+source_file="res://assets/map_objects/furnace/ore.png"
+dest_files=[ "res://.import/ore.png-0c3c36a3154971562c07e1defa482160.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ore.png-1cbb71f8a8ab520d2201e0d92201a457.stex"
+path="res://.import/HoleWithCoal.png-a84ba0620bcb64ae98fff01ff0c1fe7c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/furnace/ore.png"
-dest_files=[ "res://.import/ore.png-1cbb71f8a8ab520d2201e0d92201a457.stex" ]
+source_file="res://assets/map_objects/hole/HoleWithCoal.png"
+dest_files=[ "res://.import/HoleWithCoal.png-a84ba0620bcb64ae98fff01ff0c1fe7c.stex" ]
 
 [params]
 

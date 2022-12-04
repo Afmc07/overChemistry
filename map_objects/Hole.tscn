@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://maps/map_objects/Hole.gd" type="Script" id=1]
-[ext_resource path="res://assets/objects/hole/Hole.png" type="Texture" id=2]
-[ext_resource path="res://maps/map_objects/InteractionBubble.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map_objects/Hole.gd" type="Script" id=1]
+[ext_resource path="res://assets/map_objects/hole/Hole.png" type="Texture" id=2]
+[ext_resource path="res://map_objects/InteractionBubble.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 190.54, 81.5788 )
