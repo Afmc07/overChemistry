@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HoleSticks.png-f9ba0b596f4f85f1643ae31be6e874fd.stex"
+path="res://.import/chest_01.png-6e90c467b8660b77b5acc2e080681209.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/hole/HoleSticks.png"
-dest_files=[ "res://.import/HoleSticks.png-f9ba0b596f4f85f1643ae31be6e874fd.stex" ]
+source_file="res://assets/map_objects/chest_01.png"
+dest_files=[ "res://.import/chest_01.png-6e90c467b8660b77b5acc2e080681209.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -1,21 +1,22 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/objects/furnace/ore.png" type="Texture" id=1]
+[ext_resource path="res://assets/map_objects/furnace/ore.png" type="Texture" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 23.0
+radius = 24.0208
 
-[node name="CopperOre" type="Sprite"]
+[node name="StoneObstacle" type="Sprite"]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 98, 128, 30, 33 )
+region_rect = Rect2( 194, 33, 30, 30 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CopperCollision" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 14, 11, -4, 14, -14, 13, -13, 2, -9, -8, -2, -11, 3, -14, 9, -8, 15, 2 )
+[node name="StoneCollision" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -9, 15, -15, 11, -14, 5, -9, -6, 0, -13, 7, -11, 9, -3, 13, 1, 14, 12 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2( 0, 2 )

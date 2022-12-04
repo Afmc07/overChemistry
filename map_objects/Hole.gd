@@ -3,10 +3,10 @@ extends Sprite
 var show_interaction_bubble = false
 var hole_status = "empty"
 
-var empty_hole = preload("res://assets/objects/hole/Hole.png")
-var hole_with_sticks = preload("res://assets/objects/hole/HoleSticks.png")
-var hole_with_sticks_burning = preload("res://assets/objects/hole/HoleSticksBurning.png")
-var hole_with_coal = preload("res://assets/objects/hole/HoleWithCoal.png")
+var empty_hole = preload("res://assets/map_objects/hole/Hole.png")
+var hole_with_sticks = preload("res://assets/map_objects/hole/HoleSticks.png")
+var hole_with_sticks_burning = preload("res://assets/map_objects/hole/HoleSticksBurning.png")
+var hole_with_coal = preload("res://assets/map_objects/hole/HoleWithCoal.png")
 
 onready var COAL_SCENE = preload("res://items/Coal.tscn")
 

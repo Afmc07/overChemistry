@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://maps/map_objects/Tree.tscn" type="PackedScene" id=2]
-[ext_resource path="res://maps/map_objects/Hole.tscn" type="PackedScene" id=3]
-[ext_resource path="res://maps/map_objects/Furnace.tscn" type="PackedScene" id=4]
+[ext_resource path="res://map_objects/Tree.tscn" type="PackedScene" id=2]
+[ext_resource path="res://map_objects/Hole.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map_objects/Furnace.tscn" type="PackedScene" id=4]
 [ext_resource path="res://maps/Background.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/CliffTileset.png" type="Texture" id=6]
 [ext_resource path="res://assets/DirtTileset.png" type="Texture" id=7]
-[ext_resource path="res://maps/map_objects/CopperOre.tscn" type="PackedScene" id=8]
-[ext_resource path="res://maps/map_objects/StoneObstacle.tscn" type="PackedScene" id=9]
-[ext_resource path="res://maps/map_objects/IronOre.tscn" type="PackedScene" id=10]
+[ext_resource path="res://map_objects/CopperOre.tscn" type="PackedScene" id=8]
+[ext_resource path="res://map_objects/StoneObstacle.tscn" type="PackedScene" id=9]
+[ext_resource path="res://map_objects/IronOre.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
