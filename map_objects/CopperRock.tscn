@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/map_objects/furnace/ore.png" type="Texture" id=1]
+[ext_resource path="res://map_objects/CopperRock.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 23.0
 
-[node name="CopperOre" type="Sprite"]
+[node name="CopperRock" type="Sprite" groups=["MapObject"]]
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 98, 128, 30, 33 )
+script = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
