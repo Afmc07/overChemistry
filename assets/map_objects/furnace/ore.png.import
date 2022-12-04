@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ore.png-965e145bc9b793c5eaf6700cd581ad30.stex"
+path="res://.import/ore.png-0c3c36a3154971562c07e1defa482160.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/ore.png"
-dest_files=[ "res://.import/ore.png-965e145bc9b793c5eaf6700cd581ad30.stex" ]
+source_file="res://assets/map_objects/furnace/ore.png"
+dest_files=[ "res://.import/ore.png-0c3c36a3154971562c07e1defa482160.stex" ]
 
 [params]
 
