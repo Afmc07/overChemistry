@@ -81,5 +81,5 @@ func interact(held_item):
 		if hole_status == "with_coal":
 			get_coal()
 			return COAL_SCENE.instance()
-
+	
 	return held_item
