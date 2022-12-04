@@ -18,3 +18,5 @@ func _input(event):
 			var confirmation = CONFIRMATION_SCENE.instance()
 			add_child(confirmation)
 			get_tree().paused = true
+	elif event.get_action_strength("test"):
+		DialogueUtils.open("test.json")
