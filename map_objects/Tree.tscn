@@ -28,7 +28,6 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 physics_material_override = SubResource( 8 )
 
 [node name="TreeCollision" type="CollisionShape2D" parent="StaticBody2D"]
@@ -38,7 +37,6 @@ shape = SubResource( 11 )
 [node name="InteractionArea" type="Area2D" parent="." groups=["Tree"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-visible = false
 position = Vector2( -7.62939e-06, 10.6667 )
 shape = SubResource( 10 )
 
