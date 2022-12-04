@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 25.0
 
-[node name="IronOre" type="Sprite"]
+[node name="IronOre" type="Sprite" groups=["MapObject"]]
 texture = ExtResource( 1 )
 hframes = 8
 vframes = 11
