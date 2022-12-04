@@ -48,6 +48,7 @@ position = Vector2( -2, 16 )
 shape = SubResource( 1 )
 
 [node name="texture" type="Sprite" parent="."]
+scale = Vector2( -1, 1 )
 texture = ExtResource( 1 )
 hframes = 12
 
@@ -60,3 +61,4 @@ anims/RESET = SubResource( 3 )
 position = Vector2( 13.75, -7 )
 scale = Vector2( 0.338889, 0.288889 )
 animation = "stick"
+frame = 1

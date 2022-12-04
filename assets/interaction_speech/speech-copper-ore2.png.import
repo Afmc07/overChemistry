@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ore.png-965e145bc9b793c5eaf6700cd581ad30.stex"
+path="res://.import/speech-copper-ore2.png-daa1a51283597d43ddd72cbe39a1a7e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/ore.png"
-dest_files=[ "res://.import/ore.png-965e145bc9b793c5eaf6700cd581ad30.stex" ]
+source_file="res://assets/interaction_speech/speech-copper-ore2.png"
+dest_files=[ "res://.import/speech-copper-ore2.png-daa1a51283597d43ddd72cbe39a1a7e6.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
