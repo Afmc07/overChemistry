@@ -60,4 +60,3 @@ anims/RESET = SubResource( 3 )
 position = Vector2( 13.75, -7 )
 scale = Vector2( 0.338889, 0.288889 )
 animation = "stick"
-frame = 1
