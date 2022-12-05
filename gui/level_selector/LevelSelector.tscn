@@ -41,7 +41,6 @@ margin_left = 336.0
 margin_top = 104.0
 margin_right = 376.0
 margin_bottom = 144.0
-disabled = true
 
 [node name="BackButton" type="TextureButton" parent="."]
 margin_left = 8.0
@@ -54,4 +53,5 @@ expand = true
 
 [connection signal="pressed" from="Level1Button" to="." method="_on_Level1Button_pressed"]
 [connection signal="pressed" from="Level2Button" to="." method="_on_Level2Button_pressed"]
+[connection signal="pressed" from="Level3Button" to="." method="_on_Level3Button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
