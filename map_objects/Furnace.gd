@@ -4,6 +4,16 @@ extends Sprite
 onready var COPPER_SCENE = preload("res://items/Copper.tscn")
 onready var IRON_SCENE = preload("res://items/Iron.tscn")
 
+var furnace_with_copper_metal = preload("res://assets/map_objects/furnace/furnace-copper-metal.png")
+var furnace_with_copper_ore_and_coal = preload("res://assets/map_objects/furnace/furnace-copper-ore-coal.png")
+var furnace_with_copper_ore = preload("res://assets/map_objects/furnace/furnace-copper-ore.png")
+var lit_furnace = preload("res://assets/map_objects/furnace/furnace-fire.png")
+var furnace_with_iron_metal = preload("res://assets/map_objects/furnace/furnace-iron-metal.png")
+var furnace_with_iron_ore_and_coal = preload("res://assets/map_objects/furnace/furnace-iron-ore-coal.png")
+var furnace_with_iron_ore = preload("res://assets/map_objects/furnace/furnace-iron-ore.png")
+var empty_furnace = preload("res://assets/map_objects/furnace/furnace.png")
+
+
 onready var furnace_status = "empty"
 
 
