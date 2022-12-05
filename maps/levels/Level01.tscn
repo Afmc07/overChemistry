@@ -189,14 +189,14 @@ position = Vector2( 31, 63 )
 scale = Vector2( 0.65873, 0.65873 )
 
 [node name="Blacksmith" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 437, 138 )
+position = Vector2( 442, 142 )
 
 [node name="River" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 207, 241.376 )
+position = Vector2( 207, 248.927 )
 rotation = -1.5708
-scale = Vector2( 4.64946, 3.11541 )
+scale = Vector2( 4.84046, 3.1154 )
 z_index = -1
-frame = 4
+frame = 2
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )

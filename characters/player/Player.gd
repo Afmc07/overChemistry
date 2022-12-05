@@ -22,6 +22,10 @@ func _on_InteractionArea_area_entered(area):
 
 	if area.get_parent().is_in_group("MapObject"):
 		map_object_in_range = area.get_parent()
+	
+	if area.get_parent().is_in_group("River"):
+		map_object_in_range = area.get_parent()
+
 
 
 func _on_InteractionArea_area_exited(area):
@@ -30,6 +34,9 @@ func _on_InteractionArea_area_exited(area):
 			item_in_range = null
 
 	if area.get_parent().is_in_group("MapObject"):
+		if not has_overlapping_map_object():
+			map_object_in_range = null
+	if area.get_parent().is_in_group("River"):
 		if not has_overlapping_map_object():
 			map_object_in_range = null
 
@@ -68,7 +75,6 @@ func update_bubble():
 func should_show_bubble():
 	return held_item != null
 
-
 func held_item_name():
 	return held_item.name.to_lower().rstrip("0123456789")
 
@@ -76,19 +82,25 @@ func held_item_name():
 func handle_velocity(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized()
+	input_vector.y = (Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up"))
+	
+	if map_object_in_range != null:
+		if map_object_in_range.is_in_group("River"):
+			input_vector.y -= 1.5
 
 	if input_vector != Vector2.ZERO:
 		if input_vector.x > 0:
 			sprite.flip_h = false
 		elif input_vector.x < 0:
 			sprite.flip_h = true
-		animation_player.play("Walking")
+		if input_vector.x == 0 and input_vector.y == -1.5:
+			animation_player.play("Idle")
+		else: 
+			animation_player.play("Walking")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animation_player.play("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		velocity = velocity.move_toward(input_vector, FRICTION * delta)
 
 	velocity = move_and_slide(velocity)
 
