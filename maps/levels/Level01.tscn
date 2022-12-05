@@ -192,11 +192,11 @@ scale = Vector2( 0.65873, 0.65873 )
 position = Vector2( 437, 138 )
 
 [node name="River" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 207, 251 )
+position = Vector2( 207, 241.376 )
 rotation = -1.5708
-scale = Vector2( 16.1325, 3.11541 )
+scale = Vector2( 4.64946, 3.11541 )
 z_index = -1
-frame = 1
+frame = 4
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )
