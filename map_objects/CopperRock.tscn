@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/map_objects/furnace/ore.png" type="Texture" id=1]
 [ext_resource path="res://map_objects/CopperRock.gd" type="Script" id=2]
-[ext_resource path="res://map_objects/InteractionBubble.tscn" type="PackedScene" id=3]
+[ext_resource path="res://items/ItemBubble.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 23.0
@@ -14,18 +14,23 @@ region_rect = Rect2( 98, 128, 30, 33 )
 script = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CopperCollision" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 14, 11, -4, 14, -14, 13, -14, 5, -10, 6, -4, 5, 0, 7, 6, 5, 14, 2 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2( 0, 2 )
 shape = SubResource( 1 )
 
-[node name="AnimatedSprite" parent="." instance=ExtResource( 3 )]
-position = Vector2( 11, -11 )
-scale = Vector2( 0.338889, 0.288889 )
-animation = "stick"
+[node name="ItemBubble" parent="." instance=ExtResource( 3 )]
+position = Vector2( 18, -16 )
+scale = Vector2( 0.266667, 0.266667 )
+animation = "copper-ore-z"
 frame = 1
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_InteractionArea_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_InteractionArea_area_exited"]

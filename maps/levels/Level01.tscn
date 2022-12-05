@@ -125,9 +125,6 @@ tile_data = PoolIntArray( 4, 0, 0, 5, 0, 1, 6, 0, 1, 7, 0, 2, 19, 0, 0, 20, 0, 1
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 354, 87 )
-
 [node name="Tree" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 435, 32 )
 scale = Vector2( 1.08093, 0.978113 )
@@ -191,12 +188,15 @@ scale = Vector2( 0.65873, 0.65873 )
 [node name="Blacksmith" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 437, 138 )
 
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 354, 87 )
+
 [node name="River" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 207, 241.376 )
 rotation = -1.5708
 scale = Vector2( 4.64946, 3.11541 )
 z_index = -1
-frame = 4
+frame = 2
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )

@@ -13,7 +13,7 @@ var held_item = null
 onready var animation_player = $AnimationPlayer
 onready var sprite = $Sprite
 onready var interaction_area = $Position2D/InteractionArea
-onready var bubble = $SpeechBubble
+onready var bubble = $ItemBubble
 
 
 func _on_InteractionArea_area_entered(area):

@@ -35,9 +35,9 @@ position = Vector2( -7.62939e-06, 10.6667 )
 shape = SubResource( 10 )
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 11.6818, -13.5303 )
 scale = Vector2( 0.225252, 0.225252 )
-frame = 1
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_InteractionArea_area_entered"]
 [connection signal="area_exited" from="InteractionArea" to="." method="_on_InteractionArea_area_exited"]
