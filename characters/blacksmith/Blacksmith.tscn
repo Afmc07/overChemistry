@@ -59,3 +59,4 @@ anims/RESET = SubResource( 3 )
 position = Vector2( 4, -15 )
 scale = Vector2( 0.244444, 0.244444 )
 animation = "copper"
+frame = 0

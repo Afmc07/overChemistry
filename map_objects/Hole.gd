@@ -1,6 +1,5 @@
 extends Sprite
 
-var show_interaction_bubble = false
 var hole_status = "empty"
 
 var empty_hole = preload("res://assets/map_objects/hole/Hole.png")
@@ -44,29 +43,10 @@ func _on_InteractionArea_area_exited(area):
 		animated_sprite.visible = false
 
 
-func put_sticks():
-	get_node(".").set_texture(hole_with_sticks)
-	hole_status = "with_sticks"
-	animated_sprite.play("fire-z")
-
-
-func start_fire():
-	get_node(".").set_texture(hole_with_sticks_burning)
-	hole_status = "with_sticks_burning"
-	$Timer.start()
-	animated_sprite.visible = false
-
-
 func _on_Timer_timeout():
 	get_node(".").set_texture(hole_with_coal)
 	hole_status = "with_coal"
 	play_animation("coal-z")
-
-
-func get_coal():
-	get_node(".").set_texture(empty_hole)
-	hole_status = "empty"
-	animated_sprite.visible = false
 
 
 func interact(held_item):
@@ -83,3 +63,23 @@ func interact(held_item):
 			return COAL_SCENE.instance()
 	
 	return held_item
+
+
+func put_sticks():
+	get_node(".").set_texture(hole_with_sticks)
+	hole_status = "with_sticks"
+	animated_sprite.play("fire-z")
+
+
+func start_fire():
+	get_node(".").set_texture(hole_with_sticks_burning)
+	hole_status = "with_sticks_burning"
+	$Timer.start()
+	animated_sprite.visible = false
+
+
+func get_coal():
+	get_node(".").set_texture(empty_hole)
+	hole_status = "empty"
+	animated_sprite.visible = false
+

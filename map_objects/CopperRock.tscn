@@ -27,6 +27,7 @@ position = Vector2( 0, 2 )
 shape = SubResource( 1 )
 
 [node name="ItemBubble" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 18, -16 )
 scale = Vector2( 0.266667, 0.266667 )
 

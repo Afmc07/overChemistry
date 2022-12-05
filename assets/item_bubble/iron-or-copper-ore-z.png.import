@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/furnace-copper-metal.png-aa22bc58cfc1732422f38c10543deb23.stex"
+path="res://.import/iron-or-copper-ore-z.png-25a08475cad86a709770f28659940c2f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map_objects/furnace/furnace-copper-metal.png"
-dest_files=[ "res://.import/furnace-copper-metal.png-aa22bc58cfc1732422f38c10543deb23.stex" ]
+source_file="res://assets/item_bubble/iron-or-copper-ore-z.png"
+dest_files=[ "res://.import/iron-or-copper-ore-z.png-25a08475cad86a709770f28659940c2f.stex" ]
 
 [params]
 
