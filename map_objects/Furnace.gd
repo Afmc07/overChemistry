@@ -61,7 +61,6 @@ func _on_Interaction_Area_area_exited(area):
 
 
 func _on_Timer_timeout():
-	print("timeout")
 	if furnace_status == "with_copper_coal_lit":
 		get_node(".").set_texture(furnace_with_copper_metal)
 		furnace_status = "with_copper"
@@ -74,7 +73,6 @@ func _on_Timer_timeout():
 
 
 func interact(held_item):
-	print(furnace_status)
 	if held_item != null:
 		if furnace_status == "empty" and is_ore(held_item):
 			put_ore(held_item)
