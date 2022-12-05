@@ -84,7 +84,7 @@ rotation = 4.71239
 scale = Vector2( 16.1325, 3.29079 )
 frames = SubResource( 17 )
 animation = "Flowing"
-frame = 9
+frame = 6
 playing = true
 centered = false
 

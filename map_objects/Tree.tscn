@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/map_objects/objects.png" type="Texture" id=1]
 [ext_resource path="res://map_objects/InteractionBubble.tscn" type="PackedScene" id=2]
@@ -10,9 +10,6 @@ rough = true
 bounce = 10.0
 absorbent = true
 
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 12.3636, 14.0952 )
-
 [sub_resource type="CircleShape2D" id=10]
 radius = 26.9522
 
@@ -23,16 +20,13 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 78, 50, 62 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_material_override = SubResource( 8 )
 
-[node name="TreeCollision" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="TreeCollision" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( -0.72728, 14.0952 )
-shape = SubResource( 11 )
+polygon = PoolVector2Array( 0.72728, -10.2857, 5.81818, -10.2857, 5.81818, 1.14289, 11.6364, 6.47623, 11.6364, 10.2858, 9.45455, 13.3334, -6.54545, 13.3334, -7.27272, 11.0477, -12.3636, 11.0477, -9.45454, 1.14289, -5.0909, -9.52378 )
 
 [node name="InteractionArea" type="Area2D" parent="." groups=["Tree"]]
 
@@ -41,9 +35,9 @@ position = Vector2( -7.62939e-06, 10.6667 )
 shape = SubResource( 10 )
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 11.6818, -13.5303 )
 scale = Vector2( 0.225252, 0.225252 )
+frame = 1
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_InteractionArea_area_entered"]
 [connection signal="area_exited" from="InteractionArea" to="." method="_on_InteractionArea_area_exited"]
