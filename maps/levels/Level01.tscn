@@ -127,7 +127,7 @@ tile_data = PoolIntArray( 4, 0, 0, 5, 0, 1, 6, 0, 1, 7, 0, 2, 19, 0, 0, 20, 0, 1
 
 [node name="Tree" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 435, 32 )
-scale = Vector2( 1.08093, 0.978113 )
+scale = Vector2( 1, 1 )
 
 [node name="Hole" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 310, 229 )
@@ -139,7 +139,7 @@ scale = Vector2( 0.126064, 0.127218 )
 
 [node name="Furnace" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 435, 207 )
-scale = Vector2( 0.694444, 0.642725 )
+scale = Vector2( 0.659, 0.659 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -150,53 +150,47 @@ scale = Vector2( 0.151064, 0.147581 )
 
 [node name="IronOre" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 98, 25 )
-scale = Vector2( 1.2868, 1.25 )
 
 [node name="CopperOre" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 26, 217 )
-scale = Vector2( 1.43333, 1.28788 )
+position = Vector2( 24, 212 )
 
 [node name="StoneObstacle" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 17, 111 )
 
 [node name="StoneObstacle2" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 48, 111 )
-scale = Vector2( 1.03333, 1.06667 )
+position = Vector2( 47, 111 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="StoneObstacle3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 79, 110 )
-scale = Vector2( 1.1, 1.03333 )
+position = Vector2( 77, 111 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="StoneObstacle4" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 146, 110 )
-scale = Vector2( 1.2, 1.11 )
+position = Vector2( 137, 111 )
 
 [node name="StoneObstacle5" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 114, 110 )
-scale = Vector2( 1.175, 1.04148 )
+position = Vector2( 107, 111 )
 
 [node name="Furnace2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 31, 63 )
+position = Vector2( 31, 60 )
 scale = Vector2( 0.65873, 0.65873 )
 
 [node name="Blacksmith" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 437, 138 )
+position = Vector2( 442, 142 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 354, 87 )
 
 [node name="River" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 207, 241.376 )
+position = Vector2( 207, 248.927 )
 rotation = -1.5708
-scale = Vector2( 4.64946, 3.11541 )
+scale = Vector2( 4.84046, 3.1154 )
 z_index = -1
-frame = 2
+frame = 0
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )

@@ -99,7 +99,7 @@ animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "Flowing",
-"speed": 10.0
+"speed": 30.0
 }, {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
@@ -109,24 +109,24 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "New Anim 1",
-"speed": 2.0
+"speed": 4.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 7.96529, 7.90083 )
+extents = Vector2( 26.0404, 7.90081 )
 
-[node name="River" type="AnimatedSprite"]
+[node name="River" type="AnimatedSprite" groups=["River"]]
 position = Vector2( 225, 246.688 )
 rotation = 4.71239
 scale = Vector2( 4.82869, 3.29079 )
 frames = SubResource( 17 )
 animation = "New Anim 1"
-frame = 6
+frame = 3
 playing = true
 centered = false
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="InteractionArea" type="Area2D" parent="." groups=["River"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 8.00793, 7.90082 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2( 26.083, 7.9008 )
 shape = SubResource( 3 )

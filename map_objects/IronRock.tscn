@@ -9,10 +9,8 @@ radius = 25.0
 
 [node name="IronOre" type="Sprite" groups=["MapObject"]]
 texture = ExtResource( 1 )
-hframes = 8
-vframes = 11
 region_enabled = true
-region_rect = Rect2( 33, 193, 240, 320 )
+region_rect = Rect2( 129, 130, 31, 31 )
 script = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -20,7 +18,7 @@ visible = false
 
 [node name="IronCollision" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( -3, 3 )
-polygon = PoolVector2Array( -10, 8, -11, 1, -5, 2, 2, 2, 9, 4, 18, 4, 18, 10, 13, 13 )
+polygon = PoolVector2Array( -11, 7, -10, 1, -5, 2, 2, 2, 8, 2, 16, -4, 15, 6, -3, 10 )
 
 [node name="Interaction Area" type="Area2D" parent="."]
 visible = false
@@ -29,10 +27,8 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="ItemBubble" parent="." instance=ExtResource( 3 )]
-position = Vector2( 18, -17 )
-scale = Vector2( 0.338889, 0.338889 )
-animation = "iron-ore-z"
-frame = 1
+position = Vector2( 19, -16 )
+scale = Vector2( 0.268056, 0.268056 )
 
 [connection signal="area_entered" from="Interaction Area" to="." method="_on_Interaction_Area_area_entered"]
 [connection signal="area_exited" from="Interaction Area" to="." method="_on_Interaction_Area_area_exited"]
