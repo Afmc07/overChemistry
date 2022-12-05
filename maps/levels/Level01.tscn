@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map_objects/Tree.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://map_objects/StoneObstacle.tscn" type="PackedScene" id=9]
 [ext_resource path="res://map_objects/IronRock.tscn" type="PackedScene" id=10]
 [ext_resource path="res://characters/blacksmith/Blacksmith.tscn" type="PackedScene" id=11]
+[ext_resource path="res://gui/timer/Timer.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -187,3 +188,6 @@ scale = Vector2( 0.65873, 0.65873 )
 
 [node name="Blacksmith" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 437, 138 )
+
+[node name="timer" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3, 1 )
