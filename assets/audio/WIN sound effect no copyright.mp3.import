@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WIN sound effect no copyright.mp3-a6f6bca3e550e2e886157c627136403f.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/WIN sound effect no copyright.mp3"
+dest_files=[ "res://.import/WIN sound effect no copyright.mp3-a6f6bca3e550e2e886157c627136403f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

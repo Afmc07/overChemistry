@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Minecraft - Main Theme - Calm 8-Bit.mp3-be3557968a6201d11a9da0e4d746a71e.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Minecraft - Main Theme - Calm 8-Bit.mp3"
+dest_files=[ "res://.import/Minecraft - Main Theme - Calm 8-Bit.mp3-be3557968a6201d11a9da0e4d746a71e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

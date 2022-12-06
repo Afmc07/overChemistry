@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cover Megaman 4 Dr Cossack Stage 3 & 4.mp3-b008980add9f99652dd7395b251563d1.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Cover Megaman 4 Dr Cossack Stage 3 & 4.mp3"
+dest_files=[ "res://.import/Cover Megaman 4 Dr Cossack Stage 3 & 4.mp3-b008980add9f99652dd7395b251563d1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

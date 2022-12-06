@@ -2,6 +2,7 @@ extends Control
 
 
 onready var text_label = $Panel/Columns/TextContainer/Text
+onready var clickNode = get_tree().get_root().get_node("Main/click")
 
 var conversation = []
 var current_index = 0
@@ -37,13 +38,16 @@ func update():
 
 
 func _on_ButtonNext_button_up():
+	clickNode.play()
 	next()
 
 
 func _on_ButtonPrev_button_up():
+	clickNode.play()
 	previous()
 
 
 func _on_ButtonFinish_button_up():
+	clickNode.play()
 	queue_free()
 #	hide()

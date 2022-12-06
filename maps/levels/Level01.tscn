@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map_objects/Tree.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://gui/timer/Timer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://map_objects/River.tscn" type="PackedScene" id=13]
 [ext_resource path="res://maps/levels/Level01.gd" type="Script" id=14]
+[ext_resource path="res://assets/audio/Cover Megaman 4 Dr Cossack Stage 3 & 4.mp3" type="AudioStream" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -196,3 +197,8 @@ frame = 1
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -5.0
+autoplay = true
