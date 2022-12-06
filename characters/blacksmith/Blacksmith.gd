@@ -31,7 +31,15 @@ func _ready():
 
 func end_game():
 	$ItemBubble.visible = false
-	get_tree().get_root().get_node("Main").end_level(3)
+	var result = 0
+	var timer = get_parent().get_parent().get_node("timer")
+	if timer.time < 300:			# Time to get 3 stars
+		result = 3
+	elif timer.time < 600:			# Time to get 2 stars
+		result = 2
+	else:
+		result = 1
+	get_tree().get_root().get_node("Main").end_level(result)
 
 func interact(held_item):
 	if held_item != null:
