@@ -2,26 +2,26 @@ extends Node2D
 
 
 onready var orders = [
-#	"iron",
+	"iron",
 	"coal",
-#	"iron",
-#	"copper",
-#	"coal",
-#	"iron",
-#	"iron",
-#	"coal",
-#	"copper",
-#	"coal",
-#	"copper",
-#	"coal",
-#	"copper",
-#	"copper",
-#	"copper",
-#	"iron",
-#	"iron",
-#	"copper",
-#	"copper",
-#	"iron"
+	"iron",
+	"copper",
+	"coal",
+	"iron",
+	"iron",
+	"coal",
+	"copper",
+	"coal",
+	"copper",
+	"coal",
+	"copper",
+	"copper",
+	"copper",
+	"iron",
+	"iron",
+	"copper",
+	"copper",
+	"iron"
 ]
 
 
