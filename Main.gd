@@ -12,10 +12,19 @@ func change_scene(scene: String) -> void:
 	add_child(next_scene)
 	current_scene = next_scene
 
-func end_level(result: int):
+func end_level(timer):
 	var result_instance = RESULT_SCENE.instance()
 	add_child(result_instance)
-	result_instance.set_game_result(result)
+	
+	var result = 0
+	if timer.time < 180:			# Time to get 3 stars
+		result = 3
+	elif timer.time < 240:			# Time to get 2 stars
+		result = 2
+	else:
+		result = 1
+	
+	result_instance.set_game_result(result, timer.time_to_string())
 	get_tree().paused = true
 
 func return_to_level_selection(result: int):

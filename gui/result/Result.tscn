@@ -28,37 +28,38 @@ theme = SubResource( 1 )
 script = ExtResource( 7 )
 
 [node name="PanelLeft" type="Sprite" parent="."]
-position = Vector2( -16, 8 )
-scale = Vector2( 1.23077, 2 )
+position = Vector2( -16, 14 )
+scale = Vector2( 1.23077, 2.27273 )
 texture = ExtResource( 1 )
 
 [node name="PanelCenter" type="Sprite" parent="."]
-position = Vector2( 36, 7.99999 )
-scale = Vector2( 88, 2 )
+position = Vector2( 36, 14 )
+scale = Vector2( 88, 2.27273 )
 texture = ExtResource( 2 )
 
 [node name="PanelRight" type="Sprite" parent="."]
-position = Vector2( 88, 8 )
-scale = Vector2( 1.23077, 2 )
+position = Vector2( 88, 14 )
+scale = Vector2( 1.23077, 2.27273 )
 texture = ExtResource( 3 )
 
 [node name="BackButton" type="TextureButton" parent="."]
 margin_left = 8.0
-margin_top = 24.0
-margin_right = 57.0
-margin_bottom = 40.0
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 48.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 5 )
 expand = true
 
-[node name="Label" type="Label" parent="BackButton"]
+[node name="ButtonLabel" type="Label" parent="BackButton"]
 margin_left = 8.0
 margin_top = 3.0
-margin_right = 40.0
+margin_right = 48.0
 margin_bottom = 11.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Voltar"
+align = 1
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 margin_top = -20.0
@@ -67,6 +68,19 @@ margin_bottom = 13.0
 max_value = 3.0
 texture_under = ExtResource( 8 )
 texture_progress = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TimeLabel" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 64.0
+margin_bottom = 30.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
 __meta__ = {
 "_editor_description_": ""
 }
