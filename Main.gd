@@ -11,6 +11,9 @@ func change_scene(scene: String) -> void:
 	add_child(next_scene)
 	current_scene = next_scene
 
+func end_level():
+	change_scene("res://gui/level_selector/LevelSelector.tscn")
+
 
 func _input(event):
 	if event.get_action_strength("exit"):
