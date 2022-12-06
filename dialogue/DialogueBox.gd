@@ -1,7 +1,6 @@
 extends Control
 
 
-onready var name_label = $Panel/Columns/TextContainer/Name
 onready var text_label = $Panel/Columns/TextContainer/Text
 
 var conversation = []
@@ -34,7 +33,6 @@ func previous():
 		update()
 
 func update():
-	name_label.text = conversation[current_index].name
 	text_label.text = conversation[current_index].text
 
 

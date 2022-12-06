@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://map_objects/Tree.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://characters/blacksmith/Blacksmith.tscn" type="PackedScene" id=11]
 [ext_resource path="res://gui/timer/Timer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://map_objects/River.tscn" type="PackedScene" id=13]
+[ext_resource path="res://maps/levels/Level01.gd" type="Script" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -112,6 +113,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 3/z_index = 0
 
 [node name="World2" type="Node2D"]
+script = ExtResource( 14 )
 
 [node name="Background" parent="." instance=ExtResource( 5 )]
 position = Vector2( 161, 89 )
@@ -190,7 +192,7 @@ position = Vector2( 207, 248.927 )
 rotation = -1.5708
 scale = Vector2( 4.84046, 3.1154 )
 z_index = -1
-frame = 4
+frame = 5
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )

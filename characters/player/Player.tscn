@@ -76,7 +76,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 19.0
+radius = 23.0217
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 166, 92 )

@@ -114,7 +114,7 @@ func handle_item_actions():
 
 
 func can_pick_item():
-	return held_item == null and item_in_range != null
+	return held_item == null and has_overlapping_item()
 
 
 func pick_item():
