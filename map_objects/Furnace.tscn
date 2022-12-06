@@ -40,7 +40,6 @@ visible = false
 position = Vector2( 26, -15 )
 scale = Vector2( 0.388889, 0.388889 )
 animation = "fire-z"
-frame = 0
 
 [connection signal="area_entered" from="Interaction Area" to="." method="_on_Interaction_Area_area_entered"]
 [connection signal="area_exited" from="Interaction Area" to="." method="_on_Interaction_Area_area_exited"]
