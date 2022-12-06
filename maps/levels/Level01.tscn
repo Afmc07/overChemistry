@@ -190,7 +190,7 @@ position = Vector2( 207, 248.927 )
 rotation = -1.5708
 scale = Vector2( 4.84046, 3.1154 )
 z_index = -1
-frame = 0
+frame = 4
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )
