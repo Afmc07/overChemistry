@@ -58,7 +58,7 @@ theme = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "A Verdadeira 
-História da Quimica"
+História da Química"
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 198.0
