@@ -2,26 +2,26 @@ extends Node2D
 
 
 onready var orders = [
-	"iron",
+#	"iron",
 	"coal",
-	"iron",
-	"copper",
-	"coal",
-	"iron",
-	"iron",
-	"coal",
-	"copper",
-	"coal",
-	"copper",
-	"coal",
-	"copper",
-	"copper",
-	"copper",
-	"iron",
-	"iron",
-	"copper",
-	"copper",
-	"iron"
+#	"iron",
+#	"copper",
+#	"coal",
+#	"iron",
+#	"iron",
+#	"coal",
+#	"copper",
+#	"coal",
+#	"copper",
+#	"coal",
+#	"copper",
+#	"copper",
+#	"copper",
+#	"iron",
+#	"iron",
+#	"copper",
+#	"copper",
+#	"iron"
 ]
 
 
@@ -31,7 +31,7 @@ func _ready():
 
 func end_game():
 	$ItemBubble.visible = false
-	print("End Game")
+	get_tree().get_root().get_node("Main").end_level()
 
 func interact(held_item):
 	if held_item != null:
