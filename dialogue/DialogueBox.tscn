@@ -1,8 +1,26 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://dialogue/DialogueBox.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/sqr_button_normal.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/sqr_button_pressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/words/joystix monospace.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+extra_spacing_space = -2
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 11
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 11
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 11
+font_data = ExtResource( 4 )
 
 [node name="DialogueBox" type="Control"]
 pause_mode = 2
@@ -34,6 +52,8 @@ size_flags_horizontal = 3
 margin_right = 434.0
 margin_bottom = 55.0
 size_flags_vertical = 3
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Text"
 align = 1
 valign = 1
@@ -75,22 +95,28 @@ texture_pressed = ExtResource( 3 )
 [node name="Label" type="Label" parent="."]
 margin_left = 445.0
 margin_top = 183.0
-margin_right = 485.0
-margin_bottom = 197.0
+margin_right = 455.0
+margin_bottom = 196.2
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = ">"
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 445.0
 margin_top = 201.0
-margin_right = 485.0
-margin_bottom = 215.0
+margin_right = 455.0
+margin_bottom = 214.2
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "<"
 
 [node name="Label3" type="Label" parent="."]
 margin_left = 445.0
 margin_top = 219.0
-margin_right = 485.0
-margin_bottom = 233.0
+margin_right = 455.0
+margin_bottom = 232.2
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "x"
 
 [connection signal="button_up" from="Panel/Columns/ButtonsContainer/ButtonNext" to="." method="_on_ButtonNext_button_up"]
