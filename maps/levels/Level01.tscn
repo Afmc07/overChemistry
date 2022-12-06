@@ -182,7 +182,7 @@ position = Vector2( 31, 60 )
 scale = Vector2( 0.65873, 0.65873 )
 
 [node name="Blacksmith" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 442, 142 )
+position = Vector2( 442, 109 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 354, 87 )
@@ -192,7 +192,7 @@ position = Vector2( 207, 248.927 )
 rotation = -1.5708
 scale = Vector2( 4.84046, 3.1154 )
 z_index = -1
-frame = 5
+frame = 1
 
 [node name="timer" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3, 1 )

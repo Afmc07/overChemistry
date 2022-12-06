@@ -31,6 +31,7 @@ func end_game():
 		result = 1
 	get_tree().get_root().get_node("Main").end_level(result)
 
+
 func interact(held_item):
 	if held_item != null:
 		if held_item.name.to_lower() == orders.front():
