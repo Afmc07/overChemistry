@@ -3,6 +3,11 @@ extends Control
 onready var musicNode = get_tree().get_root().get_node("Main/music")
 onready var clickNode = get_tree().get_root().get_node("Main/click")
 
+
+func set_game_result(result):
+	$TextureProgress.value = result
+
+
 func _on_Level1Button_pressed():
 	clickNode.play()
 	start_level("res://maps/tutorials/TutorialCarbon.tscn")

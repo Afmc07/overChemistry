@@ -31,7 +31,7 @@ func _ready():
 
 func end_game():
 	$ItemBubble.visible = false
-	get_tree().get_root().get_node("Main").end_level()
+	get_tree().get_root().get_node("Main").end_level(3)
 
 func interact(held_item):
 	if held_item != null:

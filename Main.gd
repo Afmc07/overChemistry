@@ -11,8 +11,9 @@ func change_scene(scene: String) -> void:
 	add_child(next_scene)
 	current_scene = next_scene
 
-func end_level():
+func end_level(result: int):
 	change_scene("res://gui/level_selector/LevelSelector.tscn")
+	current_scene.set_game_result(result)
 
 
 func _input(event):
