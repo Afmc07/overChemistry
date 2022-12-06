@@ -5,7 +5,9 @@ onready var clickNode = get_tree().get_root().get_node("Main/click")
 
 
 func _ready():
-	DialogueUtils.open("LevelSelector.json")
+	if not DialogueUtils.level_selector_dialogue_shown:
+		DialogueUtils.open("LevelSelector.json")
+		DialogueUtils.level_selector_dialogue_shown = true
 
 
 func set_game_result(result):

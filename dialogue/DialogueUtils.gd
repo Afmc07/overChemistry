@@ -6,6 +6,7 @@ onready var DEFAULT_PATH = "res://dialogue/dialogues/"
 
 onready var DIALOGUE_BOX_SCENE = preload("res://dialogue/DialogueBox.tscn")
 
+var level_selector_dialogue_shown = false
 
 """
 Open the the dialogue from the file res://dialogue/dialogues/<file_path>
