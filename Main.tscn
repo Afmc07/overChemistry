@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://gui/menu/Menu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Overcooked Theme 8 Bit Remix Overcooked Main Menu 8 Bit Game Music.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/Overcooked Theme 8 Bit Remix Overcooked Main Menu 8 Bit Game Music.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/click.mp3" type="AudioStream" id=4]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -13,5 +14,9 @@ margin_top = 3.0
 margin_right = 3.0
 margin_bottom = 3.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

@@ -1,13 +1,26 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://gui/level_selector/button/LevelButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/ui/back_button_pressed.png" type="Texture" id=2]
 [ext_resource path="res://gui/level_selector/LevelSelector.gd" type="Script" id=3]
 [ext_resource path="res://assets/ui/back_button_normal.png" type="Texture" id=4]
 [ext_resource path="res://assets/ui/words/joystix monospace.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/3_Stars_under.png" type="Texture" id=6]
+[ext_resource path="res://assets/Stars.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
+extra_spacing_space = -2
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 7
+extra_spacing_space = -2
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 7
+extra_spacing_space = -2
 font_data = ExtResource( 5 )
 
 [node name="LevelSelector" type="Control"]
@@ -56,23 +69,41 @@ texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 2 )
 expand = true
 
-[node name="Label" type="Label" parent="."]
-margin_left = 53.0
-margin_top = 144.0
-margin_right = 117.0
-margin_bottom = 164.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Tutorial"
-
 [node name="Label2" type="Label" parent="."]
-margin_left = 193.0
-margin_top = 144.0
-margin_right = 249.0
-margin_bottom = 164.0
+margin_left = 331.0
+margin_top = 92.0
+margin_right = 390.0
+margin_bottom = 104.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Nível 1"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 92.0
+margin_right = 131.0
+margin_bottom = 100.4
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "tutorial carbono"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 162.0
+margin_top = 92.0
+margin_right = 296.0
+margin_bottom = 104.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "tutorial cobre e ferro"
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 321.0
+margin_top = 144.0
+margin_right = 391.0
+margin_bottom = 177.0
+max_value = 3.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 7 )
 
 [connection signal="pressed" from="Level1Button" to="." method="_on_Level1Button_pressed"]
 [connection signal="pressed" from="Level2Button" to="." method="_on_Level2Button_pressed"]
