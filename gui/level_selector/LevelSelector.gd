@@ -8,6 +8,10 @@ func _ready():
 	DialogueUtils.open("LevelSelector.json")
 
 
+func set_game_result(result):
+	$TextureProgress.value = result
+
+
 func _on_Level1Button_pressed():
 	clickNode.play()
 	start_level("res://maps/tutorials/TutorialCarbon.tscn")
