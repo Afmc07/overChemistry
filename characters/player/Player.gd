@@ -14,7 +14,7 @@ onready var animation_player = $AnimationPlayer
 onready var sprite = $Sprite
 onready var interaction_area = $Position2D/InteractionArea
 onready var bubble = $ItemBubble
-
+onready var audioFx = $AudioStreamPlayer
 
 func _on_InteractionArea_area_entered(area):
 	if area.is_in_group("Item"):
@@ -118,12 +118,14 @@ func can_pick_item():
 
 
 func pick_item():
+	audioFx.play()
 	held_item = item_in_range.duplicate()
 	item_in_range.queue_free()
 
 
 func drop_item():
 	if held_item != null:
+		audioFx.play()
 		held_item.position = global_position
 		get_parent().add_child(held_item)
 		held_item = null

@@ -113,7 +113,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 26.0404, 7.90081 )
+extents = Vector2( 25.8869, 0.759699 )
 
 [node name="River" type="AnimatedSprite" groups=["River"]]
 position = Vector2( 225, 246.688 )
@@ -121,12 +121,12 @@ rotation = 4.71239
 scale = Vector2( 4.82869, 3.29079 )
 frames = SubResource( 17 )
 animation = "New Anim 1"
-frame = 3
+frame = 6
 playing = true
 centered = false
 
 [node name="InteractionArea" type="Area2D" parent="." groups=["River"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2( 26.083, 7.9008 )
+position = Vector2( 26.2365, 8.05275 )
 shape = SubResource( 3 )

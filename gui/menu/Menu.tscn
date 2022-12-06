@@ -1,17 +1,19 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://gui/menu/Menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/ui/start_button_pressed.png" type="Texture" id=2]
-[ext_resource path="res://assets/ui/start_button_normal.png" type="Texture" id=3]
-[ext_resource path="res://assets/ui/exit_button_pressed.png" type="Texture" id=4]
-[ext_resource path="res://assets/ui/exit_button_normal.png" type="Texture" id=5]
+[ext_resource path="res://assets/ui/rect_button_pressed.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/rect_button_normal.png" type="Texture" id=3]
 [ext_resource path="res://assets/ui/words/joystix monospace.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/ui/pixel_backgrounds_laboratory_dark_1_4_by_comradecourage_ded6ppb.png" type="Texture" id=7]
 
 [sub_resource type="Theme" id=1]
 
 [sub_resource type="DynamicFont" id=2]
-size = 13
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 10
 font_data = ExtResource( 6 )
 
 [node name="Menu" type="Control"]
@@ -38,8 +40,8 @@ margin_left = 191.0
 margin_top = 214.0
 margin_right = 255.0
 margin_bottom = 238.0
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 4 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
 expand = true
 
 [node name="Label" type="Label" parent="."]
@@ -57,6 +59,24 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "A Verdadeira 
 História da Quimica"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 198.0
+margin_top = 193.0
+margin_right = 248.0
+margin_bottom = 207.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Inicio"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 206.0
+margin_top = 218.0
+margin_right = 240.0
+margin_bottom = 232.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Sair"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
